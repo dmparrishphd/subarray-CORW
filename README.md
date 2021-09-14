@@ -1,0 +1,2 @@
+# subarray-CORW
+extract subarrays
