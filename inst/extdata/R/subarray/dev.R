@@ -1,5 +1,12 @@
 # formals ( arrayInd )
 
+submatrixc <- function ( X , j = integer () ) if ( length ( j ) ) X [ , - j ] else X
+
+submatrixr <- function ( X , i = integer () ) if ( length ( i ) ) X [ - i , ] else X
+
+submatrix <- function ( X , i = integer () , j = integer () )
+        submatrixr ( submatrixc ( X , j ) , i )
+
 arrayInds <- function ( .dim )
         arrayInd (
             ind = seq_len ( prod ( .dim ) ) ,
